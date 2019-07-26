@@ -11,10 +11,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sol-->
+        <!--Photos Collection View Controller-->
         <scene sceneID="qrJ-5e-Jtz">
             <objects>
-                <collectionViewController id="0FC-E6-GT9" sceneMemberID="viewController">
+                <collectionViewController id="0FC-E6-GT9" customClass="PhotosCollectionViewController" customModule="AstronomyObjC2Mon" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="fJm-Fq-gn6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -47,7 +47,7 @@
                                     <constraint firstItem="dph-yK-v1y" firstAttribute="centerX" secondItem="JTb-dd-B96" secondAttribute="centerX" id="Dou-KZ-vOm"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="6fd-Cb-1Dj" kind="show" id="lP1-7D-M8d"/>
+                                    <segue destination="6fd-Cb-1Dj" kind="show" identifier="PhotoDetail" id="lP1-7D-M8d"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -56,18 +56,16 @@
                             <outlet property="delegate" destination="0FC-E6-GT9" id="jhg-ZP-bJ6"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" title="Sol" id="FFr-HA-VIG">
-                        <barButtonItem key="backBarButtonItem" title="&lt;" id="kOl-iK-K7o"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="FFr-HA-VIG"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IdG-gz-hm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="720.28985507246387" y="172.76785714285714"/>
         </scene>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="oS7-de-XXm">
             <objects>
-                <viewController id="6fd-Cb-1Dj" sceneMemberID="viewController">
+                <viewController id="6fd-Cb-1Dj" customClass="DetailViewController" customModule="AstronomyObjC2Mon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="oGM-Li-wJX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,6 +107,9 @@
                                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Save to photo library"/>
+                                        <connections>
+                                            <action selector="saveToPhotoLibraryTapped:" destination="6fd-Cb-1Dj" eventType="touchUpInside" id="3ru-Wk-Ly4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -124,6 +125,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dCu-dG-KSc"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="K3w-Gf-Oo2"/>
+                    <connections>
+                        <outlet property="cameraLabel" destination="Ed4-gA-jbE" id="dTc-3z-jP7"/>
+                        <outlet property="descriptionLabel" destination="0M3-a3-7ds" id="PKw-1u-eGM"/>
+                        <outlet property="imageView" destination="1J8-ny-erL" id="7tZ-lX-KLV"/>
+                        <outlet property="specificCameraLabel" destination="Ueu-39-WID" id="T8o-hE-WE0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dv2-hz-QR0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

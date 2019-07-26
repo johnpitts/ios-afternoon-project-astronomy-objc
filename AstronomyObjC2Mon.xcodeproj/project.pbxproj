@@ -12,6 +12,10 @@
 		FC35F77822E64BF100337E60 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC35F77722E64BF100337E60 /* Assets.xcassets */; };
 		FC35F77B22E64BF100337E60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC35F77922E64BF100337E60 /* LaunchScreen.storyboard */; };
 		FC35F77E22E64BF100337E60 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FC35F77D22E64BF100337E60 /* main.m */; };
+		FC35F78C22E6661D00337E60 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35F78B22E6661D00337E60 /* DetailViewController.swift */; };
+		FC35F78E22E6663E00337E60 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35F78D22E6663E00337E60 /* PhotosCollectionViewController.swift */; };
+		FC35F79022E6668600337E60 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC35F78F22E6668600337E60 /* ImageCollectionViewCell.swift */; };
+		FC35F7BF22EA3CFC00337E60 /* JGPMarsRoverClient.m in Sources */ = {isa = PBXBuildFile; fileRef = FC35F7BE22EA3CFC00337E60 /* JGPMarsRoverClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +27,12 @@
 		FC35F77A22E64BF100337E60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC35F77C22E64BF100337E60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC35F77D22E64BF100337E60 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FC35F78A22E6661D00337E60 /* AstronomyObjC2Mon-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AstronomyObjC2Mon-Bridging-Header.h"; sourceTree = "<group>"; };
+		FC35F78B22E6661D00337E60 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		FC35F78D22E6663E00337E60 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
+		FC35F78F22E6668600337E60 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		FC35F7BD22EA3CFC00337E60 /* JGPMarsRoverClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGPMarsRoverClient.h; sourceTree = "<group>"; };
+		FC35F7BE22EA3CFC00337E60 /* JGPMarsRoverClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGPMarsRoverClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +67,17 @@
 			children = (
 				FC35F76E22E64BF000337E60 /* AppDelegate.h */,
 				FC35F76F22E64BF000337E60 /* AppDelegate.m */,
+				FC35F78B22E6661D00337E60 /* DetailViewController.swift */,
+				FC35F78F22E6668600337E60 /* ImageCollectionViewCell.swift */,
+				FC35F78D22E6663E00337E60 /* PhotosCollectionViewController.swift */,
 				FC35F77422E64BF000337E60 /* Main.storyboard */,
+				FC35F7BE22EA3CFC00337E60 /* JGPMarsRoverClient.m */,
+				FC35F7BD22EA3CFC00337E60 /* JGPMarsRoverClient.h */,
 				FC35F77722E64BF100337E60 /* Assets.xcassets */,
 				FC35F77922E64BF100337E60 /* LaunchScreen.storyboard */,
 				FC35F77C22E64BF100337E60 /* Info.plist */,
 				FC35F77D22E64BF100337E60 /* main.m */,
+				FC35F78A22E6661D00337E60 /* AstronomyObjC2Mon-Bridging-Header.h */,
 			);
 			path = AstronomyObjC2Mon;
 			sourceTree = "<group>";
@@ -92,11 +108,13 @@
 		FC35F76322E64BF000337E60 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JGP;
 				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = johnpitts;
 				TargetAttributes = {
 					FC35F76A22E64BF000337E60 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -136,8 +154,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC35F7BF22EA3CFC00337E60 /* JGPMarsRoverClient.m in Sources */,
+				FC35F78C22E6661D00337E60 /* DetailViewController.swift in Sources */,
+				FC35F79022E6668600337E60 /* ImageCollectionViewCell.swift in Sources */,
 				FC35F77E22E64BF100337E60 /* main.m in Sources */,
 				FC35F77022E64BF000337E60 /* AppDelegate.m in Sources */,
+				FC35F78E22E6663E00337E60 /* PhotosCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +301,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASMS2YJYR9;
 				INFOPLIST_FILE = AstronomyObjC2Mon/Info.plist;
@@ -288,6 +311,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnpitts.AstronomyObjC2Mon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AstronomyObjC2Mon/AstronomyObjC2Mon-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -296,6 +322,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ASMS2YJYR9;
 				INFOPLIST_FILE = AstronomyObjC2Mon/Info.plist;
@@ -305,6 +332,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.johnpitts.AstronomyObjC2Mon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AstronomyObjC2Mon/AstronomyObjC2Mon-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
